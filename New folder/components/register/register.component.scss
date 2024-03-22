@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.reg{
+    display: flex;
+    height:100vh;
+    width:100vw;
+    background-color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column-reverse;
+}
+.reg1{
+    height: 45vh;
+    width: 140vh;
+    background-color:white;
+    border-radius: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 60px;
+    
+}
+img{
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.reg1 h1{
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 30px;  
+}
+.one{
+    display: grid;
+    grid-template-columns: 30vw;
+    grid-template-rows: 10vh 10vh;
+}
+.two{
+    display: grid;
+    grid-template-columns: 30vw;
+}
+.com{
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 200px; 
+    margin-top: 20px;   
+}
+.but{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: absolute;
+    margin-left:1000px;
+    margin-top: 200px;
+}
+.but button{
+    border-radius: 35%;
+    height: 40px;
+    width: 45px;
+}
+.out{
+    display: flex;
+    margin-left: 1000px;    
+}
+.state{
+    display: flex;
+}
+#id{
+    border-radius: 20px;
+}

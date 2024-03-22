@@ -1,0 +1,118 @@
+<div class="topnav">
+    <div class="topleft">
+      <div class="but">
+        <button class="logo" (click)="toggleCollapse()">
+          <span class="material-symbols-outlined">
+            menu
+          </span>
+        </button>
+      </div>
+  
+      <a href="http://localhost:4200/sidenav">
+        <div class="keeplogo">
+          <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png">
+          <span class="keep">Keep</span>
+        </div>
+      </a>
+    </div>
+    <div class="topmid">
+        <div class="buttons">
+          <button>
+            <span class="material-symbols-outlined qwerty">
+              search
+            </span>
+          </button>
+        </div>
+        <input type="search" class="searchbar" placeholder="Search">
+    </div>
+    <div class="topright">
+      <div class="rightbuttons">
+        <button>
+          <span class="material-symbols-outlined r-v-s">
+            refresh
+          </span>
+        </button>
+        <button>
+          <span class="material-symbols-outlined r-v-s">
+            view_agenda
+          </span>
+        </button>
+        <button>
+          <span class="material-symbols-outlined">
+            settings
+          </span>
+        </button>
+      </div>
+      <div class="rightprofile">
+        <button>
+          <span class="material-symbols-outlined g-g">
+            apps
+          </span>
+        </button>
+  
+          <span id="profile" class="material-symbols-outlined g-g">
+            account_circle
+          </span>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+    <div class="logo-container">
+        <button class="logo" (click)="toggleCollapse()">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+    </div>
+    <ul class="sidenav-nav">
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class=" sidenav-nav-link " [routerLink]="[data.routeLink]">
+                <span class="material-symbols-outlined">
+                    lightbulb
+                </span>
+                <i class="sidenav-link-icon " [class]="data.icon"></i>
+                <span class="sidenav-link-text " *ngIf="collapsed">{{data.label}}</span>
+            </a>
+        </li>
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class=" sidenav-nav-link " [routerLink]="[data.routeLink]">
+                <span class="material-symbols-outlined">
+                    notifications
+                    </span>
+                <i class="sidenav-link-icon " [class]="data.icon"></i>
+                <span class="sidenav-link-text " *ngIf="collapsed">{{data.label1}}</span>
+            </a>
+        </li>
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class=" sidenav-nav-link " [routerLink]="[data.routeLink]">
+                <span class="material-symbols-outlined">
+                    edit
+                    </span>
+                <i class="sidenav-link-icon " [class]="data.icon"></i>
+                <span class="sidenav-link-text " *ngIf="collapsed">{{data.label2}}</span>
+            </a>
+        </li>
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class=" sidenav-nav-link " [routerLink]="[data.routeLink]">
+                <span class="material-symbols-outlined">
+                    archive
+                </span>
+                <i class="sidenav-link-icon " [class]="data.icon"></i>
+                <span class="sidenav-link-text " *ngIf="collapsed">{{data.label3}}</span>
+            </a>
+        </li>
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class=" sidenav-nav-link " [routerLink]="[data.routeLink]">
+                <span class="material-symbols-outlined">
+                    delete
+                    </span>
+                <i class="sidenav-link-icon " [class]="data.icon"></i>
+                <span class="sidenav-link-text " *ngIf="collapsed">{{data.label4}}</span>
+            </a>
+        </li>
+    </ul>
+  </div>
+  <!-- <app-create-note></app-create-note>
+  <app-displaynotes></app-displaynotes> -->

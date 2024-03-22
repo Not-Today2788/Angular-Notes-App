@@ -1,0 +1,66 @@
+<div class="box" >
+    <div *ngIf="display; then box1 else box2"></div>
+    <ng-template #box1>
+    <div class="box1">
+
+        <input type="text" placeholder="Take a note... " (click)="display=!display">
+        <div class="first">
+            <button class="one">
+                <span class="material-symbols-outlined">
+                    check_box
+                </span>
+            </button>
+            <button class="two">
+                <span class="material-symbols-outlined">
+                    brush
+                </span>
+            </button>
+            <button class="three">
+                <span class="material-symbols-outlined">
+                    image
+                </span>
+            </button>
+        
+        </div>
+
+    </div>
+</ng-template>
+<ng-template #box2>
+    <form [formGroup]="noteForm" >
+    <div class="box2">
+        <div class="div1">
+            <input type="text" placeholder="Title"  formControlName="Title">    
+            <button class="kee1">
+                <span class="material-symbols-outlined" >
+                    keep
+                    </span>
+            </button>  
+
+        </div>
+        <div class="div2">
+
+            <input type="text" placeholder="Take a note..." class="bo" formControlName="discription">   
+        </div>
+        <div class="box3">
+
+            <app-noteicons></app-noteicons>
+            <button class="six">
+                <span class="material-symbols-outlined">
+                    undo
+                    </span>
+            </button>
+            <button class="seven">
+                <span class="material-symbols-outlined">
+                    redo
+                    </span>
+            </button>
+            
+            <button class="eig" (click)="Notesubmit()" type="button">Close</button>
+        </div>
+        
+       
+    </div>
+    </form>
+</ng-template>
+
+</div>
